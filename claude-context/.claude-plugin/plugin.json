@@ -1,7 +1,7 @@
 {
   "name": "claude-context",
   "description": "Code search MCP for Claude Code. Make entire codebase the context for any coding agent.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://github.com/zilliztech/claude-context",
   "userConfig": {
     "milvus_address": {
@@ -13,15 +13,8 @@
     "milvus_token": {
       "type": "string",
       "title": "Milvus Token",
-      "description": "Milvus / Zilliz Cloud access token. Stored in ~/.claude/settings.json (Claude Code's keychain-backed secret storage isn't wired up for plugin userConfig yet — issue anthropics/claude-code#39455).",
+      "description": "Milvus / Zilliz Cloud access token. Stored in ~/.claude/settings.json as plain text until Claude Code wires up keychain-backed userConfig (see anthropics/claude-code#39455).",
       "sensitive": false
-    },
-    "milvus_timeout_ms": {
-      "type": "string",
-      "title": "Milvus timeout (ms)",
-      "description": "gRPC deadline for Milvus operations. Raise above 15000 if you see DEADLINE_EXCEEDED on Zilliz Serverless cold-starts (upstream bug: zilliztech/claude-context#289, #290, #154). Takes effect only once upstream PR #291 merges — earlier versions of @zilliz/claude-context-mcp don't read this env.",
-      "sensitive": false,
-      "default": "60000"
     }
   }
 }
