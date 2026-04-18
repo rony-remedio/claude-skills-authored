@@ -1,9 +1,15 @@
 {
   "name": "claude-context",
   "description": "Code search MCP for Claude Code. Make entire codebase the context for any coding agent.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/zilliztech/claude-context",
   "userConfig": {
+    "milvus_address": {
+      "type": "string",
+      "title": "Milvus Address",
+      "description": "Milvus or Zilliz Cloud endpoint (e.g. http://localhost:19530 or https://<cluster>.api.<region>.zillizcloud.com).",
+      "sensitive": false
+    },
     "milvus_token": {
       "type": "string",
       "title": "Milvus Token",
