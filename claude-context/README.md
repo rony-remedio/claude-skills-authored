@@ -67,7 +67,6 @@ Claude Code prompts for these values when you run `/plugin install claude-contex
 
 - `milvus_address` — Milvus / Zilliz Cloud endpoint (e.g. `http://localhost:19530` or `https://<cluster>.api.<region>.zillizcloud.com`).
 - `milvus_token` — Milvus / Zilliz Cloud access token.
-- `milvus_timeout_ms` — gRPC deadline for Milvus operations (string, default `60000`). Only takes effect once the post-install patch above is applied OR upstream PR #291 merges.
 
 ### Heads-up on secret storage
 
@@ -80,6 +79,7 @@ The wrapper ships the Ollama embedding profile. To switch to OpenAI / Voyage / e
 - `EMBEDDING_PROVIDER = Ollama`
 - `EMBEDDING_MODEL = nomic-embed-text`
 - `OLLAMA_HOST = http://localhost:11434`
+- `MILVUS_TIMEOUT_MS = 60000` — raises the Milvus gRPC deadline from the 15 s default so Zilliz Serverless cold-starts don't fail. Only takes effect once the post-install patch above is applied OR upstream PR #291 merges.
 
 ## Known issue: Zilliz Serverless cold-start
 
