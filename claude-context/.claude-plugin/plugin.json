@@ -5,7 +5,9 @@
   "homepage": "https://github.com/zilliztech/claude-context",
   "userConfig": {
     "milvus_token": {
-      "description": "Value for MILVUS_TOKEN",
+      "type": "string",
+      "title": "Milvus Token",
+      "description": "Sets the MILVUS_TOKEN environment variable.",
       "sensitive": true
     }
   }
