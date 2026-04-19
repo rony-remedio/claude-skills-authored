@@ -1,0 +1,6 @@
+{
+  "name": "claude-context",
+  "description": "Code search MCP for Claude Code. Make entire codebase the context for any coding agent.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/zilliztech/claude-context"
+}
